@@ -11,6 +11,7 @@
     </parent>
 
     <artifactId>jnanframe-springcloud-dubbo-nacos-dependencies</artifactId>
+    <packaging>pom</packaging>
 
     <name>jnanframe-springcloud-dubbo-nacos-dependencies</name>
     <description>jnanframe project nacos dependencies for microservice</description>

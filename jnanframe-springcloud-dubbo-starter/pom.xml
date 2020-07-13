@@ -12,7 +12,7 @@
 
     <artifactId>jnanframe-springcloud-dubbo-starter</artifactId>
 
-    <name>jnanframe-springcloud-dubbo</name>
+    <name>jnanframe-springcloud-dubbo-starter</name>
     <description>A cunstom starter project that all projects based can simplify development.</description>
     <url>https://github.com/jiajiangnan</url>
 
