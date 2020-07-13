@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.jnanframe.microservice</groupId>
-    <artifactId>jnanframe-springcloud-dubbo</artifactId>
+    <artifactId>jnanframe-springcloud-dubbo-dependencies</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>jnanframe-springcloud-dubbo</name>
-    <description>Project to integrate springcloud and dubbo</description>
+    <name>jnanframe-springcloud-dubbo-dependencies</name>
+    <description>jnanframe project dependencies for microservice</description>
     <url>https://github.com/jiajiangnan</url>
 
     <licenses>
@@ -28,29 +28,74 @@
         </developer>
     </developers>
 
-
-    <modules>
-        <module>jnanframe-springcloud-dubbo-dependencies</module>
-    </modules>
-
-
     <properties>
-        <java.version>1.8</java.version>
-        <maven.compiler.source>${java.version}</maven.compiler.source>
-        <maven.compiler.target>${java.version}</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <spring-boot.version>2.1.1.RELEASE</spring-boot.version>
+        <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+        <spring-cloud-alibaba.version>0.2.1.RELEASE</spring-cloud-alibaba.version>
+
+        <dubbo.version>2.6.6</dubbo.version>
+        <dubbo-spring-boot.version>0.2.1.RELEASE</dubbo-spring-boot.version>
+        <dubbo-registry-nacos.version>0.0.1</dubbo-registry-nacos.version>
+        <dubbo-serialization-kryo.version>2.6.6</dubbo-serialization-kryo.version>
+        <alibaba-spring-context-support.version>1.0.2</alibaba-spring-context-support.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!-- Spring Boot -->
             <dependency>
-                <groupId>com.jnanframe.microservice</groupId>
-                <artifactId>jnanframe-springcloud-dubbo-dependencies</artifactId>
-                <version>${project.version}</version>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <!-- Spring Cloud -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring-cloud-alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <!-- Dubbo  -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo</artifactId>
+                <version>${dubbo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo-registry-nacos</artifactId>
+                <version>${dubbo-registry-nacos.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>dubbo-serialization-kryo</artifactId>
+                <version>${dubbo-serialization-kryo.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>dubbo-spring-boot-starter</artifactId>
+                <version>${dubbo-spring-boot.version}</version>
+            </dependency>
+
+            <!-- Alibaba -->
+            <dependency>
+                <groupId>com.alibaba.spring</groupId>
+                <artifactId>spring-context-support</artifactId>
+                <version>${alibaba-spring-context-support.version}</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 
@@ -61,9 +106,6 @@
                 <plugins>
                     <plugin>
                         <artifactId>maven-compiler-plugin</artifactId>
-                        <configuration>
-                            <parameters>true</parameters>
-                        </configuration>
                     </plugin>
 
                     <!-- Source -->
@@ -96,14 +138,13 @@
                         </executions>
                     </plugin>
 
-                    <!-- GPG -->
-                    <plugin> <!-- 进行验签 -->
+                    <!-- GPG 进行延签-->
+                    <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
                         <artifactId>maven-gpg-plugin</artifactId>
                         <version>1.6</version>
                         <executions>
                             <execution>
-                                <id>sign-artifacts</id>
                                 <phase>verify</phase>
                                 <goals>
                                     <goal>sign</goal>
@@ -113,20 +154,20 @@
                     </plugin>
                 </plugins>
             </build>
-
             <!--
             <distributionManagement>
                 <snapshotRepository>
                     <id>oss</id>
-                    <url>https://172.168.1.1/content/repositories/snapshots/</url>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
                 </snapshotRepository>
                 <repository>
                     <id>oss</id>
-                    <url>https://172.168.1.1/service/local/staging/deploy/maven2/</url>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
                 </repository>
             </distributionManagement>
             -->
         </profile>
     </profiles>
+
 
 </project>
