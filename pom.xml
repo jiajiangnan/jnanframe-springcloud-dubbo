@@ -33,6 +33,7 @@
         <module>jnanframe-springcloud-dubbo-dependencies</module>
         <module>jnanframe-springcloud-dubbo-core</module>
         <module>jnanframe-springcloud-dubbo-nacos-dependencies</module>
+        <module>jnanframe-springcloud-dubbo-starter</module>
     </modules>
 
 

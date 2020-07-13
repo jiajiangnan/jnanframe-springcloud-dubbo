@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.jnanframe.microservice</groupId>
+        <artifactId>jnanframe-springcloud-dubbo</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>jnanframe-springcloud-dubbo-starter</artifactId>
+
+    <name>jnanframe-springcloud-dubbo</name>
+    <description>A cunstom starter project that all projects based can simplify development.</description>
+    <url>https://github.com/jiajiangnan</url>
+
+    <licenses>
+        <license>
+            <name>Apache License, Version 2.0</name>
+            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Jiajiangnan</name>
+            <email>jiajiangnan.live@foxmail.com</email>
+            <organization></organization>
+            <organizationUrl>https://github.com/jiajiangnan</organizationUrl>
+        </developer>
+    </developers>
+
+
+    <dependencies>
+        <!-- Spring -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- Projects -->
+        <dependency>
+            <groupId>com.jnanframe.microservice</groupId>
+            <artifactId>jnanframe-springcloud-dubbo-core</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jnanframe.microservice</groupId>
+            <artifactId>jnanframe-springcloud-dubbo-nacos-dependencies</artifactId>
+            <version>${project.parent.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
