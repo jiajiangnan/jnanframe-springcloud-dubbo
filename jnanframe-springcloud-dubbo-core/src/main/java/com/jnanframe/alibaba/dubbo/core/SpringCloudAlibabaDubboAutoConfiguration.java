@@ -18,9 +18,10 @@ import static com.alibaba.boot.dubbo.util.DubboUtils.DUBBO_PREFIX;
 import static java.util.Collections.emptySet;
 
 @Configuration
-@ConditionalOnProperty(prefix = DUBBO_PREFIX, name = "enabled", matchIfMissing = true, havingValue = "true")
+@ConditionalOnProperty(prefix = DUBBO_PREFIX, name = "enabled", matchIfMissing = false, havingValue = "true")
 @ConditionalOnClass(AbstractConfig.class)
 public class SpringCloudAlibabaDubboAutoConfiguration {
+
     @ConditionalOnProperty(name = BASE_PACKAGES_PROPERTY_NAME)
     @ConditionalOnClass(ConfigurationPropertySources.class)
     @Bean

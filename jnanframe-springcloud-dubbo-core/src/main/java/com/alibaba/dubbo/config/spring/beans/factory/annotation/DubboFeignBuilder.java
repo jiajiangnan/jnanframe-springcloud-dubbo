@@ -8,16 +8,19 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.util.ReflectionUtils;
 
 public class DubboFeignBuilder extends Feign.Builder {
+
     @Autowired
     private ApplicationContext applicationContext;
 
     public Reference defaultReference;
-    final class DefaultReferenceClass{
-        @Reference(check = false) String field;
+
+    final class DefaultReferenceClass {
+        @Reference(check = false)
+        String field;
     }
 
     public DubboFeignBuilder() {
-        this.defaultReference = ReflectionUtils.findField(DubboFeignBuilder.DefaultReferenceClass.class,"field").getAnnotation(Reference.class);
+        this.defaultReference = ReflectionUtils.findField(DubboFeignBuilder.DefaultReferenceClass.class, "field").getAnnotation(Reference.class);
     }
 
 

@@ -11,6 +11,7 @@
     </parent>
 
     <artifactId>jnanframe-springcloud-dubbo-core</artifactId>
+    <packaging>jar</packaging>
 
     <name>jnanframe-springcloud-dubbo-core</name>
     <description>compose springcloud and dubbo for microservice</description>
@@ -35,5 +36,6 @@
             <artifactId>dubbo-spring-boot-starter</artifactId>
             <scope>provided</scope>
         </dependency>
+
     </dependencies>
 </project>

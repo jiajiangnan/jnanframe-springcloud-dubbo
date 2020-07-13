@@ -11,27 +11,11 @@
     </parent>
 
     <artifactId>jnanframe-springcloud-dubbo-starter</artifactId>
+    <packaging>pom</packaging>
 
     <name>jnanframe-springcloud-dubbo-starter</name>
     <description>A cunstom starter project that all projects based can simplify development.</description>
     <url>https://github.com/jiajiangnan</url>
-
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
-        </license>
-    </licenses>
-
-    <developers>
-        <developer>
-            <name>Jiajiangnan</name>
-            <email>jiajiangnan.live@foxmail.com</email>
-            <organization></organization>
-            <organizationUrl>https://github.com/jiajiangnan</organizationUrl>
-        </developer>
-    </developers>
-
 
     <dependencies>
         <!-- Spring -->

@@ -28,6 +28,12 @@
         </developer>
     </developers>
 
+    <scm>
+        <url>https://github.com/jiajiangnan/jnanframe-springcloud-dubbo</url>
+        <connection>scm:githttps://github.com/jiajiangnan/jnanframe-springcloud-dubbo.git</connection>
+        <developerConnection>scm:git:https://github.com/jiajiangnan/jnanframe-springcloud-dubbo.git</developerConnection>
+    </scm>
+
 
     <modules>
         <module>jnanframe-springcloud-dubbo-dependencies</module>
@@ -117,18 +123,16 @@
                 </plugins>
             </build>
 
-            <!--
             <distributionManagement>
                 <snapshotRepository>
                     <id>oss</id>
-                    <url>https://172.168.1.1/content/repositories/snapshots/</url>
+                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
                 </snapshotRepository>
                 <repository>
                     <id>oss</id>
-                    <url>https://172.168.1.1/service/local/staging/deploy/maven2/</url>
+                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
                 </repository>
             </distributionManagement>
-            -->
         </profile>
     </profiles>
 
