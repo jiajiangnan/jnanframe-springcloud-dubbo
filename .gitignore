@@ -1,4 +1,18 @@
+
+# intelij conf files
+.idea/
+*.iml
+out/
+
+#eclipse conf files
+.settings/
+.eclipse
+.myeclipse
+.classpath
+.project
+
 # Compiled class file
+target/
 *.class
 
 # Log file
