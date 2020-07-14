@@ -7,13 +7,12 @@
     <parent>
         <groupId>com.jnanframe.microservice</groupId>
         <artifactId>jnanframe-springcloud-dubbo</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>jnanframe-springcloud-dubbo-core</artifactId>
     <packaging>jar</packaging>
 
-    <name>jnanframe-springcloud-dubbo-core</name>
     <description>compose springcloud and dubbo for microservice</description>
     <url>https://github.com/jiajiangnan</url>
 
@@ -36,6 +35,7 @@
             <artifactId>dubbo-spring-boot-starter</artifactId>
             <scope>provided</scope>
         </dependency>
-
     </dependencies>
+
+
 </project>

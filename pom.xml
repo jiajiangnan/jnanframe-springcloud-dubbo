@@ -5,10 +5,9 @@
 
     <groupId>com.jnanframe.microservice</groupId>
     <artifactId>jnanframe-springcloud-dubbo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
-    <name>jnanframe-springcloud-dubbo</name>
     <description>Project to integrate springcloud and dubbo</description>
     <url>https://github.com/jiajiangnan</url>
 
@@ -38,7 +37,7 @@
     <modules>
         <module>jnanframe-springcloud-dubbo-dependencies</module>
         <module>jnanframe-springcloud-dubbo-core</module>
-        <module>jnanframe-springcloud-dubbo-nacos-dependencies</module>
+        <module>jnanframe-springcloud-dubbo-nacos</module>
         <module>jnanframe-springcloud-dubbo-starter</module>
     </modules>
 
@@ -133,6 +132,7 @@
                     <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
                 </repository>
             </distributionManagement>
+
         </profile>
     </profiles>
 

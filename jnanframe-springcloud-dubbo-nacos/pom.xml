@@ -7,14 +7,12 @@
     <parent>
         <groupId>com.jnanframe.microservice</groupId>
         <artifactId>jnanframe-springcloud-dubbo</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>jnanframe-springcloud-dubbo-nacos-dependencies</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>jnanframe-springcloud-dubbo-nacos</artifactId>
 
-    <name>jnanframe-springcloud-dubbo-nacos-dependencies</name>
-    <description>jnanframe project nacos dependencies for microservice</description>
+    <description>jnanframe project nacos for microservice</description>
     <url>https://github.com/jiajiangnan</url>
 
     <dependencies>
@@ -60,4 +58,5 @@
             <artifactId>netty-all</artifactId>
         </dependency>
     </dependencies>
+
 </project>
