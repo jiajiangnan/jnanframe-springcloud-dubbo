@@ -7,7 +7,7 @@
     <parent>
         <groupId>com.jnanframe.microservice</groupId>
         <artifactId>jnanframe-springcloud-dubbo</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
 
     <artifactId>jnanframe-springcloud-dubbo-starter</artifactId>
