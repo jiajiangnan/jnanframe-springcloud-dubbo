@@ -1,46 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.jnanframe.microservice</groupId>
-    <artifactId>jnanframe-springcloud-dubbo</artifactId>
-    <version>1.0.0</version>
+    <artifactId>jnanframe-springcloud-dubbo-parent</artifactId>
     <packaging>pom</packaging>
-
-    <description>Project to integrate springcloud and dubbo</description>
-    <url>https://github.com/jiajiangnan</url>
-
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <url>https://www.apache.org/licenses/LICENSE-2.0</url>
-        </license>
-    </licenses>
-
-    <developers>
-        <developer>
-            <name>Jiajiangnan</name>
-            <email>jiajiangnan.live@foxmail.com</email>
-            <organization></organization>
-            <organizationUrl>https://github.com/jiajiangnan</organizationUrl>
-        </developer>
-    </developers>
-
-    <scm>
-        <url>https://github.com/jiajiangnan/jnanframe-springcloud-dubbo</url>
-        <connection>scm:githttps://github.com/jiajiangnan/jnanframe-springcloud-dubbo.git</connection>
-        <developerConnection>scm:git:https://github.com/jiajiangnan/jnanframe-springcloud-dubbo.git</developerConnection>
-    </scm>
-
+    <version>2.0.0-SNAPSHOT</version>
 
     <modules>
         <module>jnanframe-springcloud-dubbo-dependencies</module>
-        <module>jnanframe-springcloud-dubbo-core</module>
-        <module>jnanframe-springcloud-dubbo-nacos</module>
-        <module>jnanframe-springcloud-dubbo-starter</module>
+        <module>jnanframe-springcloud-dubbo-starter-persistence</module>
+        <module>jnanframe-springcloud-dubbo-starter-service</module>
+        <module>jnanframe-springcloud-dubbo-starter-api</module>
+        <module>jnanframe-springcloud-dubbo-starter-view-web</module>
+        <!--<module>jnanframe-springcloud-dubbo-starter-schedule</module>-->
+        <!--<module>jnanframe-springcloud-dubbo-starter-gateway</module>-->
     </modules>
-
 
     <properties>
         <java.version>1.8</java.version>
@@ -48,6 +25,7 @@
         <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
     </properties>
 
     <dependencyManagement>
@@ -62,78 +40,5 @@
         </dependencies>
     </dependencyManagement>
 
-    <profiles>
-        <profile>
-            <id>release</id> <!-- 部署要用到 -->
-            <build>
-                <plugins>
-                    <plugin>
-                        <artifactId>maven-compiler-plugin</artifactId>
-                        <configuration>
-                            <parameters>true</parameters>
-                        </configuration>
-                    </plugin>
-
-                    <!-- Source -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <version>3.0.1</version>
-                        <executions>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>jar-no-fork</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-
-                    <!-- Javadoc -->
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>2.10.4</version>
-                        <executions>
-                            <execution>
-                                <phase>package</phase>
-                                <goals>
-                                    <goal>jar</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-
-                    <!-- GPG -->
-                    <plugin> <!-- 进行验签 -->
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>1.6</version>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals>
-                                    <goal>sign</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-
-            <distributionManagement>
-                <snapshotRepository>
-                    <id>oss</id>
-                    <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
-                </snapshotRepository>
-                <repository>
-                    <id>oss</id>
-                    <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
-                </repository>
-            </distributionManagement>
-
-        </profile>
-    </profiles>
 
 </project>
