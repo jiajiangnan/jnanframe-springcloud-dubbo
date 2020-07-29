@@ -11,7 +11,7 @@
 
     <modules>
         <module>jnanframe-springcloud-dubbo-dependencies</module>
-        <module>jnanframe-springcloud-dubbo-starter-persistence</module>
+        <module>jnanframe-springcloud-dubbo-starter-persistance</module>
         <module>jnanframe-springcloud-dubbo-starter-service</module>
         <module>jnanframe-springcloud-dubbo-starter-api</module>
         <module>jnanframe-springcloud-dubbo-starter-view-web</module>
