@@ -13,7 +13,6 @@
         <module>jnanframe-springcloud-dubbo-dependencies</module>
         <module>jnanframe-springcloud-dubbo-starter-persistance</module>
         <module>jnanframe-springcloud-dubbo-starter-service</module>
-        <module>jnanframe-springcloud-dubbo-starter-api</module>
         <module>jnanframe-springcloud-dubbo-starter-view-web</module>
         <!--<module>jnanframe-springcloud-dubbo-starter-schedule</module>-->
         <!--<module>jnanframe-springcloud-dubbo-starter-gateway</module>-->
@@ -40,5 +39,17 @@
         </dependencies>
     </dependencyManagement>
 
+
+    <distributionManagement>
+        <repository>
+            <id>oss</id>
+            <url>http://192.168.71.199:9081/repository/maven-releases/</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>oss</id>
+            <url>http://192.168.71.199:9081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>

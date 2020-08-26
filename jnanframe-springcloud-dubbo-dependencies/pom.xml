@@ -12,16 +12,15 @@
 
     <properties>
         <spring-boot.version>2.2.8.RELEASE</spring-boot.version>
-        <spring-cloud.version>Hoxton.SR6</spring-cloud.version>
+        <spring-cloud.version>Hoxton.SR2</spring-cloud.version>
         <spring-cloud-alibaba.version>2.2.1.RELEASE</spring-cloud-alibaba.version>
 
+        <jackson.version>2.9.0</jackson.version>
         <dubbo-serialization-kryo.version>2.7.7</dubbo-serialization-kryo.version>
         <skywalking-logback.version>8.0.1</skywalking-logback.version>
 
-        <mybatis-plus.version>3.3.2</mybatis-plus.version>
-        <mybatis-connector.version>8.0.20</mybatis-connector.version>
+        <mybatis-plus.version>3.3.0</mybatis-plus.version>
     </properties>
-
 
     <dependencyManagement>
         <dependencies>
@@ -55,6 +54,7 @@
 
 
             <!-- *****************  Custom dependencyManagement Start  ********************************************* -->
+
             <!-- Apache Dubbo Kryo -->
             <dependency>
                 <groupId>org.apache.dubbo</groupId>
@@ -87,15 +87,36 @@
                 <version>${mybatis-plus.version}</version>
             </dependency>
 
-            <!-- mysql-connector -->
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-                <version>${mybatis-connector.version}</version>
-            </dependency>
             <!-- *****************  Custom dependencyManagement End  ********************************************* -->
 
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
+        </plugins>
+    </build>
+
+
+    <distributionManagement>
+        <repository>
+            <id>oss</id>
+            <url>http://192.168.71.199:9081/repository/maven-releases/</url>
+        </repository>
+
+        <snapshotRepository>
+            <id>oss</id>
+            <url>http://192.168.71.199:9081/repository/maven-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 
 </project>
