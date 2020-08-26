@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.jnanframe.microservice</groupId>
-    <artifactId>jnanframe-springcloud-dubbo-parent</artifactId>
+    <artifactId>jnanframe-springcloud-dubbo</artifactId>
     <packaging>pom</packaging>
     <version>2.0.0-SNAPSHOT</version>
 
